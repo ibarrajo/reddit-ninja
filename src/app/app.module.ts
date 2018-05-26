@@ -10,6 +10,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserComponent } from './components/browser/browser.component';
+import {RedditService} from './services/reddit.service';
 
 const appRoutes: Routes = [
   {path: '', component: BrowserComponent},
@@ -31,7 +32,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AngularFontAwesomeModule
   ],
-  providers: [],
+  providers: [RedditService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
