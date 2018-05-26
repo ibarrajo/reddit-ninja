@@ -5,20 +5,31 @@ import {RouterModule, Routes} from '@angular/router';
 import {HttpModule} from '@angular/http';
 import { AppBootstrapModule } from './app-bootstrap.module';
 import { AppComponent } from './app.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BrowserComponent } from './components/browser/browser.component';
 
 const appRoutes: Routes = [
-  {path: '', component: AppComponent}
+  {path: '', component: BrowserComponent},
+  {path: 'x', component: AppComponent}
 ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    FooterComponent,
+    BrowserComponent
   ],
   imports: [
     BrowserModule,
+    CollapseModule.forRoot(),
     AppBootstrapModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
