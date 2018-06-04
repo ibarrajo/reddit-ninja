@@ -11,9 +11,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserComponent } from './components/browser/browser.component';
 import {RedditService} from './services/reddit.service';
+import { SubredditComponent } from './components/subreddit/subreddit.component';
 
 const appRoutes: Routes = [
   {path: '', component: BrowserComponent},
+  {path: 'browse/:id', component: BrowserComponent},
+  {path: 'r/:id', component: SubredditComponent},
   {path: 'x', component: AppComponent}
 ];
 
@@ -22,7 +25,8 @@ const appRoutes: Routes = [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    BrowserComponent
+    BrowserComponent,
+    SubredditComponent
   ],
   imports: [
     BrowserModule,

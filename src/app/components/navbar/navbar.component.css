@@ -1,1 +1,4 @@
-.dropdown.open .dropdown-menu { display: block; }
+/*ngx-bootstrap fix*/
+.dropdown.open .dropdown-menu {
+  display: block;
+}
